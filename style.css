@@ -1,0 +1,504 @@
+/* Laptops /  Pc */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.page1 {
+    width: 100%;
+    height: 100%;
+}
+
+.page1::-webkit-scrollbar {
+    display: none;
+}
+
+/*Navbar*/
+
+.page1>nav {
+    height: 13vh;
+    width: 100vw;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+}
+
+.nav-part-one {
+    width: 30vw;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-part-one>h4 {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.logo {
+    margin-top: -1.1%;
+    height: 14vh;
+    object-fit: cover;
+}
+
+.nav-part-two {
+    width: 30vw;
+    /* background-color: rgb(241, 233, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
+    /* Increase this value if needed */
+    /* Ensure nav stays above content */
+}
+
+.nav-part-two>button {
+    cursor: pointer;
+    padding: 1.9vh 1.3vw;
+    border-radius: 50px;
+    font-size: 1vw;
+    font-weight: 600;
+    border: none;
+    background-color: #000;
+    color: white;
+    letter-spacing: 0.6px;
+    margin: 0 0.5%;
+}
+
+.nav-part-two>button:nth-child(1) {
+    background-color: transparent;
+    color: black;
+}
+
+nav>i {
+    display: none;
+}
+
+/*Content*/
+.content {
+    width: 100vw;
+    height: calc(100vh - 13vh);
+    /* background-color: bisque; */
+    padding-top: 2vh;
+    position: absolute;
+}
+
+.content h3 {
+    background-color: #F2B0EA;
+    padding: 12px 16px;
+    width: fit-content;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+.content h1 {
+    font-size: 90px;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0;
+    line-height: 80px;
+}
+
+.content h4 {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content>button {
+    cursor: pointer;
+    padding: 1.9vh 1.9vw;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(39, 39, 89);
+    color: white;
+    letter-spacing: 0.8px;
+    margin: 30px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+/*Bottom */
+.bottom {
+    height: 40vh;
+    width: 100%;
+    /* background-color: steelblue; */
+    padding: 2vh 2vw;
+    /* gap: 1.3%;  */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+    /* white-space: nowrap; */
+}
+
+.bottom::-webkit-scrollbar {
+    display: none;
+}
+
+/*Option - 1 */
+/* body::-webkit-scrollbar{
+    display: none;
+}
+ */
+
+.elem {
+    /* display: inline-block; */
+    flex-shrink: 0;
+    height: 100%;
+    margin-right: 1vw;
+    width: 17.5%;
+    border-radius: 20px;
+    /* background-color: brown; */
+    /* border: 2px solid black; */
+    overflow: hidden;
+    position: relative;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 9%;
+}
+
+.elem .text-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    font-family: sans-serif;
+}
+
+.text-bottom h4 {
+    font-size: 1.4vw;
+    font-weight: 600;
+    margin-bottom: 0.5vh;
+}
+
+.text-bottom h5 {
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-bottom: 1vh;
+    opacity: 0.9;
+}
+
+.text-bottom button {
+    display: inline-block;
+    margin-right: 0.5vw;
+    margin-bottom: 0.5vh;
+    padding: 0.6vh 1vw;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.9vw;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.text-bottom button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* .elem:nth-child(6){
+    
+} */
+.page2 {
+    width: 100%;
+    height: 80vh;
+    background-color: orange;
+}
+
+/*Mobile Devices*/
+@media (max-width: 600px) {
+
+    /* General adjustments for mobile */
+    body {
+        font-size: 16px;
+    }
+
+    .page1 {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Improved navbar styling */
+    .page1>nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        height: 6vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-part-two>button {
+        width: auto;
+        padding: 1vh 2vw;
+        font-size: 3vw;
+    }
+
+    /* Content adjustments */
+    .content {
+        padding: 4vh 5vw;
+        text-align: center;
+    }
+
+    .content h3 {
+        font-size: 4vw;
+        margin-bottom: 2vh;
+    }
+
+    .content h1 {
+        font-size: 10vw;
+        line-height: 1.2;
+        margin-bottom: 3vh;
+    }
+
+    .content h4 {
+        font-size: 4vw;
+        margin-bottom: 4vh;
+    }
+
+    .content>button {
+        font-size: 4vw;
+        padding: 2vh 6vw;
+    }
+
+    /* Bottom section adjustments */
+    .bottom {
+        height: auto;
+        padding: 3vh 0;
+    }
+
+    .elem {
+        width: 80%;
+        margin-right: 5vw;
+    }
+
+    .text-bottom h4 {
+        font-size: 4vw;
+    }
+
+    .text-bottom h5 {
+        font-size: 3.5vw;
+    }
+
+    .text-bottom button {
+        font-size: 3vw;
+        padding: 1vh 3vw;
+    }
+
+
+    .page1>nav {
+        height: 8vh;
+        padding: 0 3vw;
+    }
+
+    .content {
+        height: calc(100vh - 8vh);
+    }
+
+    /*Navbar*/
+    nav>i {
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nav-part-one {
+        display: none;
+    }
+
+    .logo {
+        padding: 0 3.5vw;
+        margin-top: -2.8%;
+        height: 8vh;
+        margin-left: 19%;
+    }
+
+    .nav-part-two>button {
+        width: 14vw;
+        padding: 1.9vh 1.9vw;
+        font-size: 1.9vw;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    /*Content*/
+
+    .content h3 {
+        font-size: 15px;
+    }
+
+    .content h1 {
+        font-size: 13vw;
+        line-height: 45px;
+    }
+
+    .content h4 {
+        font-size: 16px;
+    }
+
+    .content>button {
+        padding: 1.9vh 3.9vw;
+        margin: 20px 0;
+    }
+}
+
+/*Ipad Devices*/
+@media (min-width: 601px) and (max-width: 1055px) {
+
+    /* Ipad Devices */
+    .page1 {
+        padding: 0 4vw;
+    }
+
+    nav {
+        padding: 0 2vw;
+    }
+
+    .content {
+        padding-top: 4vh;
+    }
+
+    .content h1 {
+        font-size: 10vw;
+        line-height: 11vw;
+    }
+
+    .content h4 {
+        max-width: 80%;
+        margin: 3vh auto;
+    }
+
+    .content>button {
+        padding: 2vh 4vw;
+        font-size: 2.2vw;
+    }
+
+    .bottom {
+        margin-top: 4vh;
+        gap: 2vw;
+    }
+
+    .elem {
+        width: 30%;
+    }
+
+    .elem img {
+        height: 20vh;
+    }
+
+    .text-bottom h4 {
+        font-size: 2.2vw;
+    }
+
+    .text-bottom h5 {
+        font-size: 1.8vw;
+    }
+
+    .text-bottom button {
+        padding: 1vh 2vw;
+        font-size: 1.5vw;
+    }
+
+    .page1>nav {
+        height: 8vh;
+    }
+
+    .content {
+        height: calc(100vh - 8vh);
+    }
+
+    /*Navbar*/
+
+    nav>i {
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nav-part-one {
+        display: none;
+    }
+
+    .logo {
+        padding: 0 3.5vw;
+        margin-top: -1.8%;
+        height: 8vh;
+        margin-left: 24%;
+    }
+
+    .nav-part-two>button {
+        width: 14vw;
+        padding: 1.9vh 1.9vw;
+        font-size: 1.9vw;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    /*Content*/
+
+    .content h3 {
+        font-size: 2.5vw;
+    }
+
+    .content h1 {
+        font-size: 12vw;
+        line-height: 9.7vw;
+    }
+
+    .content h4 {
+        padding: 0 2vw;
+        font-size: 2.8vw;
+    }
+
+    .content>button {
+        padding: 1.9vh 3.9vw;
+        margin: 20px 0;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    font-size: var(--main-font-size);
+    color: var(--main-color);
+}
